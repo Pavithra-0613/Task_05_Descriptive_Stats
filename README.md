@@ -1,6 +1,5 @@
 # Task_05_Descriptive_Stats
-Research Task 5 for OPT — Using Syracuse Women's Lacrosse 2023 stats to test LLM question answering accuracy with descriptive statistics.
-# Task_05_Descriptive_Stats
+Research Task 5 for OPT — Using Syracuse Women's Lacrosse 2023 stats to test LLM question answering accuracy with descriptive statistics
 
 ## 📌 Project Overview
 This project is part of **OPT Research Task 5** for the Syracuse University iSchool OPT program.  
