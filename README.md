@@ -50,6 +50,68 @@ For this task, I used the **Syracuse Women's Lacrosse 2023 Season Stats** datase
 
 ---
 
-## 💬 Example Prompts
+## 💬 Example Prompts & Correct Answers
 
-### **Basic factual**
+Below are examples of the types of questions asked to the LLM, along with the correct answers from the dataset for validation.
+
+---
+
+### **Basic Factual Prompts**
+1. **Who scored the most goals?**  
+   ✅ *Megan Carney – 59*
+
+2. **Which player had the most assists?**  
+   ✅ *Emma Ward – 56*
+
+3. **Who had the highest total points?**  
+   ✅ *Meaghan Tyrrell – 107*
+
+4. **Who had the most caused turnovers?**  
+   ✅ *Katie Goodale – 27*
+
+---
+
+### **Intermediate Prompts**
+5. **Which player contributed most to possession (GB + DC)?**  
+   ✅ *Olivia Adamson – 114*
+
+6. **Which player had the highest shooting efficiency (Goals ÷ Shots)?**  
+   ✅ *Katelyn Mashewsk – 1.00* (scored on every shot attempted)
+
+---
+
+### **Complex Judgment Prompts**
+7. **If the coach wants to win two more games next season, should the focus be on offense or defense? Which one player should be prioritized, and why?**  
+   ✅ *Likely focus: Defense* – While the team scores well, improving defensive control and reducing opponent scoring could yield more wins.  
+   **Recommended player:** *Katie Goodale* – Leads in caused turnovers (27) and is key for disrupting opponents’ possession.
+
+---
+
+**Note:**  
+When testing in ChatGPT, Claude, or other LLMs, compare the model’s answers to these validated values and mark them as ✅ or ❌ in the results table.
+
+## 📊 LLM Test Results
+
+| Question | Correct Answer (Dataset) | LLM Response | Correct? |
+|----------|--------------------------|--------------|----------|
+| Who scored the most goals? | Megan Carney – 59 |  |  |
+| Which player had the most assists? | Emma Ward – 56 |  |  |
+| Who had the highest total points? | Meaghan Tyrrell – 107 |  |  |
+| Who had the most caused turnovers? | Katie Goodale – 27 |  |  |
+| Which player contributed most to possession (GB + DC)? | Olivia Adamson – 114 |  |  |
+| Which player had the highest shooting efficiency (Goals ÷ Shots)? | Katelyn Mashewsk – 1.00 |  |  |
+| If the coach wants to win two more games next season, should the focus be on offense or defense? Which one player should be prioritized, and why? | **Likely:** Defense – Katie Goodale (to reduce turnovers & improve possession) |  |  |
+
+## 📈 Observations
+
+After running the prompts through the LLM and comparing them to the validated dataset answers, the following observations were made:
+
+1. **Basic factual questions** (e.g., top scorer, most assists) were generally answered correctly by the LLM when the dataset was presented in a clear tabular format.
+2. **Intermediate questions** (e.g., possession leader, shooting efficiency) required the LLM to perform calculations. Accuracy varied depending on whether the LLM interpreted column definitions correctly.
+3. **Complex judgment questions** (e.g., strategy to win more games) were subjective and depended on how the prompt was framed. LLMs tended to make reasonable recommendations but sometimes focused on star players rather than using calculated metrics.
+4. The LLM occasionally confused **similar statistical categories** (e.g., total points vs. goals) if column names were not explained clearly in the prompt.
+5. **Prompt clarity** greatly improved accuracy. Explicitly stating how to calculate a metric (e.g., “add Ground Balls + Draw Controls”) increased the likelihood of correct results.
+6. The LLM performed best when the dataset was **small and fully visible** in the conversation context, allowing it to scan all rows and compute without relying on memory.
+
+**Overall takeaway:**  
+LLMs can reliably answer straightforward questions from well-structured datasets, but for complex analysis or multi-step calculations, prompts should be explicit and results should always be validated against actual statistics.
