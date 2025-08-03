@@ -87,20 +87,23 @@ Below are examples of the types of questions asked to the LLM, along with the co
 
 ---
 
-**Note:**  
-When testing in ChatGPT, Claude, or other LLMs, compare the model’s answers to these validated values and mark them as ✅ or ❌ in the results table.
-
 ## 📊 LLM Test Results
 
 | Question | Correct Answer (Dataset) | LLM Response | Correct? |
 |----------|--------------------------|--------------|----------|
-| Who scored the most goals? | Megan Carney – 59 |  |  |
-| Which player had the most assists? | Emma Ward – 56 |  |  |
-| Who had the highest total points? | Meaghan Tyrrell – 107 |  |  |
-| Who had the most caused turnovers? | Katie Goodale – 27 |  |  |
+| Who scored the most goals? | Megan Carney – 59 | Meaghan Tyrrell | ❌ |
+| Which player had the most assists? | Emma Ward – 56 | Emma Ward | ✅ |
+| Who had the highest total points? | Meaghan Tyrrell – 107 | Meaghan Tyrrell | ✅ |
+| Who had the most caused turnovers? | Katie Goodale – 27 | Emma Tyrrell | ❌ |
 | Which player contributed most to possession (GB + DC)? | Olivia Adamson – 114 |  |  |
 | Which player had the highest shooting efficiency (Goals ÷ Shots)? | Katelyn Mashewsk – 1.00 |  |  |
 | If the coach wants to win two more games next season, should the focus be on offense or defense? Which one player should be prioritized, and why? | **Likely:** Defense – Katie Goodale (to reduce turnovers & improve possession) |  |  |
+
+---
+
+## 🔗 LLM Test Conversation Link
+[View ChatGPT Conversation](https://chatgpt.com/share/688eb41c-1e5c-8005-b5b6-dc09dcd6e995)
+
 
 ## 📈 Observations
 
