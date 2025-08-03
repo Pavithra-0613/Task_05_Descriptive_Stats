@@ -95,10 +95,11 @@ Below are examples of the types of questions asked to the LLM, along with the co
 | Which player had the most assists? | Emma Ward – 56 | Emma Ward | ✅ |
 | Who had the highest total points? | Meaghan Tyrrell – 107 | Meaghan Tyrrell | ✅ |
 | Who had the most caused turnovers? | Katie Goodale – 27 | Emma Tyrrell | ❌ |
-| Which player contributed most to possession (GB + DC)? | Olivia Adamson – 114 |  |  |
-| Which player had the highest shooting efficiency (Goals ÷ Shots)? | Katelyn Mashewsk – 1.00 |  |  |
-| If the coach wants to win two more games next season, should the focus be on offense or defense? Which one player should be prioritized, and why? | **Likely:** Defense – Katie Goodale (to reduce turnovers & improve possession) |  |  |
+| Which player contributed most to possession (GB + DC)? | Olivia Adamson – 114 | Olivia Adamson – 114 | ✅ |
+| Which player had the highest shooting efficiency (Goals ÷ Shots)? | Katelyn Mashewsk – 1.00 | Katelyn Mashewsk – 1.00 | ✅ |
+| If the coach wants to win two more games next season, should the focus be on offense or defense? Which one player should be prioritized, and why? | **Likely:** Defense – Katie Goodale (to reduce turnovers & improve possession) | Offense – Megan Carney (improve finishing for higher scoring) | ❌ |
 
+---
 ---
 
 ## 🔗 LLM Test Conversation Link
